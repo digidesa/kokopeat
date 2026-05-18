@@ -12,6 +12,7 @@
             --text-dark: #203f19;
             --tiktok-bg: #141414;
             --shopee-bg: #ea501f;
+            --tokopedia-bg: #03a055;
         }
 
         * {
@@ -48,7 +49,6 @@
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 15px;
-            /* Tambahkan sedikit bayangan agar logo menonjol */
             box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
         }
 
@@ -123,6 +123,10 @@
             background: linear-gradient(135deg, #ff6633 0%, var(--shopee-bg) 100%);
         }
 
+        .link-card.tokopedia {
+            background: linear-gradient(135deg, #42b549 0%, var(--tokopedia-bg) 100%);
+        }
+
         .icon-wrapper {
             width: 45px;
             height: 45px;
@@ -143,6 +147,11 @@
         .shopee .icon-wrapper svg {
             width: 24px;
             fill: var(--shopee-bg);
+        }
+
+        .tokopedia .icon-wrapper svg {
+            width: 24px;
+            fill: var(--tokopedia-bg);
         }
 
         .text-wrapper {
@@ -222,7 +231,7 @@
 
     <div class="links-section">
         
-        <a href="#" class="link-card tiktok" target="_blank">
+        <a href="https://vt.tiktok.com/ZSx2cbB43/?page=Mall" class="link-card tiktok" target="_blank">
             <div class="icon-wrapper">
                 <svg viewBox="0 0 448 512"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg>
             </div>
@@ -235,13 +244,26 @@
             </div>
         </a>
 
-        <a href="#" class="link-card shopee" target="_blank">
+        <a href="https://shopee.co.id/kokopeat" class="link-card shopee" target="_blank">
             <div class="icon-wrapper">
                 <svg viewBox="0 0 448 512"><path d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64v48H160V112zm-48 48H48c-26.5 0-48 21.5-48 48V416c0 53 43 96 96 96H352c53 0 96-43 96-96V208c0-26.5-21.5-48-48-48H336V112C336 50.1 285.9 0 224 0S112 50.1 112 112v48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg>
             </div>
             <div class="text-wrapper">
                 <div class="link-title">Shopee</div>
                 <div class="link-subtitle">Kunjungi toko kami di Shopee</div>
+            </div>
+            <div class="arrow-wrapper">
+                <svg viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
+            </div>
+        </a>
+
+        <a href="https://www.tokopedia.com/kokopeat" class="link-card tokopedia" target="_blank">
+            <div class="icon-wrapper">
+                <svg viewBox="0 0 448 512"><path d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64v48H160V112zm-48 48H48c-26.5 0-48 21.5-48 48V416c0 53 43 96 96 96H352c53 0 96-43 96-96V208c0-26.5-21.5-48-48-48H336V112C336 50.1 285.9 0 224 0S112 50.1 112 112v48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg>
+            </div>
+            <div class="text-wrapper">
+                <div class="link-title">Tokopedia</div>
+                <div class="link-subtitle">Kunjungi toko kami di Tokopedia</div>
             </div>
             <div class="arrow-wrapper">
                 <svg viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
