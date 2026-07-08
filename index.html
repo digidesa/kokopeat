@@ -3,282 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kokopeat - Linktree</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Coco House | Premium Coconut Fiber Industry</title>
+    <!-- Tailwind CSS for Premium & Modern Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts - Luxurious Serif & Clean Sans-serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
     <style>
-        :root {
-            --bg-top: #e2eccb;
-            --bg-bottom: #55803c;
-            --text-dark: #203f19;
-            --tiktok-bg: #141414;
-            --shopee-bg: #ea501f;
-            --tokopedia-bg: #03a055;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: var(--text-dark);
-            padding: 40px 20px;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #060f0e; /* Deep Forest Black */
+            color: #f0f4f3;
         }
-
-        .container {
-            max-width: 480px;
-            width: 100%;
-            text-align: center;
+        .font-luxury {
+            font-family: 'Cormorant Garamond', serif;
         }
-
-        /* Bagian Header / Logo */
-        .header-section {
-            margin-bottom: 40px;
+        .nature-gradient {
+            background: linear-gradient(135deg, #a7f3d0 0%, #34d399 50%, #059669 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-
-        .logo-img {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+        .nature-bg {
+            background: linear-gradient(135deg, #10b981 0%, #059669 50%, #065f46 100%);
         }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
-            color: var(--text-dark);
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(52, 211, 153, 0.1);
         }
-
-        .subtitle {
-            font-size: 1.1rem;
-            font-weight: 500;
-            margin-bottom: 10px;
-        }
-
-        .divider {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 30px;
-        }
-
-        .divider::before, .divider::after {
-            content: "";
-            width: 50px;
-            height: 1px;
-            background-color: var(--text-dark);
-            opacity: 0.5;
-        }
-
-        .divider-dot {
-            width: 6px;
-            height: 6px;
-            background-color: var(--text-dark);
-            border-radius: 50%;
-            opacity: 0.7;
-        }
-
-        /* Bagian Tombol Link */
-        .links-section {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin-bottom: 50px;
-        }
-
-        .link-card {
-            display: flex;
-            align-items: center;
-            padding: 16px 24px;
-            border-radius: 20px;
-            text-decoration: none;
-            color: white;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .link-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 20px rgba(0,0,0,0.25);
-        }
-
-        .link-card.tiktok {
-            background: linear-gradient(135deg, #222 0%, var(--tiktok-bg) 100%);
-        }
-
-        .link-card.shopee {
-            background: linear-gradient(135deg, #ff6633 0%, var(--shopee-bg) 100%);
-        }
-
-        .link-card.tokopedia {
-            background: linear-gradient(135deg, #42b549 0%, var(--tokopedia-bg) 100%);
-        }
-
-        .icon-wrapper {
-            width: 45px;
-            height: 45px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: white;
-            border-radius: 12px;
-            margin-right: 15px;
-            flex-shrink: 0;
-        }
-
-        .tiktok .icon-wrapper svg {
-            width: 24px;
-            fill: black;
-        }
-
-        .shopee .icon-wrapper svg {
-            width: 24px;
-            fill: var(--shopee-bg);
-        }
-
-        .tokopedia .icon-wrapper svg {
-            width: 24px;
-            fill: var(--tokopedia-bg);
-        }
-
-        .text-wrapper {
-            flex-grow: 1;
-            text-align: left;
-        }
-
-        .link-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 2px;
-        }
-
-        .link-subtitle {
-            font-size: 0.8rem;
-            opacity: 0.9;
-            font-weight: 400;
-        }
-
-        .arrow-wrapper {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            border: 1.5px solid rgba(255,255,255,0.4);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
-        }
-
-        .arrow-wrapper svg {
-            width: 14px;
-            fill: white;
-        }
-
-        /* Bagian Footer */
-        .footer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            opacity: 0.8;
-        }
-
-        .footer-icon {
-            width: 40px;
-            height: 40px;
-            background-color: #d1dfb8;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .footer-icon svg {
-            width: 20px;
-            fill: var(--text-dark);
+        .product-card:hover {
+            border-color: #34d399;
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(52, 211, 153, 0.08);
         }
     </style>
 </head>
-<body>
+<body class="overflow-x-hidden">
 
-<div class="container">
-    <div class="header-section">
-        <img src="logo.webp" alt="Logo Kokopeat" class="logo-img">
-        
-        <h1>KOKOPEAT</h1>
-        <p class="subtitle">Hasil Olahan Serabut Kelapa</p>
-        
-        <div class="divider">
-            <div class="divider-dot"></div>
+    <!-- Hero Section with Parallax Effect -->
+    <header class="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: linear-gradient(rgba(6, 15, 14, 0.8), rgba(6, 15, 14, 0.95)), url('bg1.webp');">
+        <!-- Floating Ambient Light Grid (JS Effect Anchor) -->
+        <div class="absolute inset-0 pointer-events-none opacity-40 mix-blend-screen" id="ambient-particles"></div>
+
+        <div class="container mx-auto px-6 text-center z-10">
+            <h2 data-aos="fade-up" class="text-emerald-400 tracking-[0.3em] uppercase text-sm md:text-base font-medium mb-4">Sustainable Nature Quality</h2>
+            <h1 data-aos="fade-up" data-aos-delay="200" class="font-luxury text-5xl md:text-8xl font-bold mb-6 tracking-wide">
+                Welcome to <span class="nature-gradient">Coco House</span>
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="400" class="max-w-2xl mx-auto text-emerald-100/60 text-base md:text-lg font-light leading-relaxed mb-12">
+                Industri pengolahan serabut kelapa terbaik yang menghadirkan produk turunan berkualitas tinggi untuk kebutuhan global dan agrikultur Anda.
+            </p>
+            <div data-aos="fade-up" data-aos-delay="600">
+                <a href="#products" class="nature-bg text-white font-medium px-8 py-4 rounded-full shadow-lg hover:opacity-90 transition-all duration-300 tracking-wider text-sm uppercase">
+                    Jelajahi Produk
+                </a>
+            </div>
         </div>
-    </div>
 
-    <div class="links-section">
-        
-        <a href="https://vt.tokopedia.com/t/ZS9YYR7Nk2KWX-gPM4J/" class="link-card tiktok" target="_blank">
-            <div class="icon-wrapper">
-                <svg viewBox="0 0 448 512"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg>
-            </div>
-            <div class="text-wrapper">
-                <div class="link-title">TikTok Shop</div>
-                <div class="link-subtitle">Kunjungi toko kami di TikTok Shop</div>
-            </div>
-            <div class="arrow-wrapper">
-                <svg viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
-            </div>
-        </a>
-
-        <a href="https://id.shp.ee/zBWpfsUV" class="link-card shopee" target="_blank">
-            <div class="icon-wrapper">
-                <svg viewBox="0 0 448 512"><path d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64v48H160V112zm-48 48H48c-26.5 0-48 21.5-48 48V416c0 53 43 96 96 96H352c53 0 96-43 96-96V208c0-26.5-21.5-48-48-48H336V112C336 50.1 285.9 0 224 0S112 50.1 112 112v48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg>
-            </div>
-            <div class="text-wrapper">
-                <div class="link-title">Shopee</div>
-                <div class="link-subtitle">Kunjungi toko kami di Shopee</div>
-            </div>
-            <div class="arrow-wrapper">
-                <svg viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
-            </div>
-        </a>
-
-        <a href="https://tk.tokopedia.com/ZSx2c4xuD/" class="link-card tokopedia" target="_blank">
-            <div class="icon-wrapper">
-                <svg viewBox="0 0 448 512"><path d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64v48H160V112zm-48 48H48c-26.5 0-48 21.5-48 48V416c0 53 43 96 96 96H352c53 0 96-43 96-96V208c0-26.5-21.5-48-48-48H336V112C336 50.1 285.9 0 224 0S112 50.1 112 112v48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg>
-            </div>
-            <div class="text-wrapper">
-                <div class="link-title">Tokopedia</div>
-                <div class="link-subtitle">Kunjungi toko kami di Tokopedia</div>
-            </div>
-            <div class="arrow-wrapper">
-                <svg viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
-            </div>
-        </a>
-
-    </div>
-
-    <div class="footer">
-        <div class="footer-icon">
-            <svg viewBox="0 0 512 512"><path d="M272 96c-78.6 0-145.1 51.5-167.7 122.5c33.6-17 71.5-26.5 111.7-26.5h88c8.8 0 16 7.2 16 16s-7.2 16-16 16H216c-39.9 0-76.8 11.2-108.3 30.5c-44.5 27.2-76 74.4-85.1 128H48c-26.5 0-48-21.5-48-48V160C0 71.6 71.6 0 160 0h16c8.8 0 16 7.2 16 16s-7.2 16-16 16H160C89.3 32 32 89.3 32 160v41.6c17.3-39.5 49-72.2 88-92.4C161.4 81 214.3 64 272 64c114.9 0 208 93.1 208 208v16c0 8.8-7.2 16-16 16s-16-7.2-16-16V272c0-97.2-78.8-176-176-176zM464 240c26.5 0 48 21.5 48 48v224c0 0 0 0 0 0c0 0 0 0 0 0c0 0 0 0 0 0c0 0 0 0 0 0c0 0 0 0 0 0c0 0 0 0 0 0s0 0 0 0c0 0 0 0 0 0c0-26.5-21.5-48-48-48H320c-8.8 0-16-7.2-16-16s7.2-16 16-16h48c88.4 0 160-71.6 160-160V256c0-8.8-7.2-16-16-16s-16 7.2-16 16v16c0 70.7-57.3 128-128 128H304c-8.8 0-16-7.2-16-16s7.2-16 16-16h64c53 0 96-43 96-96V256c0-8.8-7.2-16-16-16s-16 7.2-16 16v16c0 35.3-28.7 64-64 64H272c-8.8 0-16-7.2-16-16s7.2-16 16-16h64c17.7 0 32-14.3 32-32V256c0-8.8-7.2-16-16-16s-16 7.2-16 16v16c0 0 0 0 0 0c0 0 0 0 0 0s0 0 0 0c0 0 0 0 0 0c0 0 0 0 0 0c0 0 0 0 0 0z"/></svg>
+        <!-- Elegant Down Arrow Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-emerald-400 hover:text-emerald-300 transition-colors">
+                <i class="fa-solid fa-chevron-down text-2xl"></i>
+            </a>
         </div>
-        <p>Terima kasih telah mendukung produk lokal ❤️</p>
-    </div>
-</div>
+    </header>
 
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-[#0a1715] relative">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right" class="relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-emerald-500"></div>
+                    <img src="profil1.webp" alt="Coconut Processing" class="rounded-lg shadow-2xl filter grayscale sepia opacity-80 hover:filter-none transition-all duration-700">
+                </div>
+                <div data-aos="fade-left" class="space-y-6">
+                    <h2 class="font-luxury text-4xl md:text-5xl font-semibold">Inovasi Hijau dari <br><span class="nature-gradient">Serabut Kelapa</span></h2>
+                    <div class="h-1 w-20 nature-bg"></div>
+                    <p class="text-emerald-100/70 font-light leading-relaxed text-justify">
+                        Coco House berdedikasi dalam mengolah sabut kelapa mentah (tepes) menjadi produk bernilai guna tinggi secara berkelanjutan. Terletak di jantung Kabupaten Banjarnegara, kami memastikan setiap proses produksi dikerjakan dengan standar ketat demi menghasilkan produk serat kelapa terbaik di kelasnya.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-24 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-xl mx-auto mb-20" data-aos="zoom-in">
+                <h2 class="font-luxury text-4xl md:text-5xl font-semibold mb-4">Produk <span class="nature-gradient">Unggulan</span></h2>
+                <p class="text-emerald-100/60 font-light">Kami menghadirkan dua varian produk pengolahan terbaik dengan spesifikasi premium.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <!-- Card 1: Cocopeat -->
+                <div data-aos="fade-up" data-aos-delay="100" class="product-card glassmorphism rounded-2xl overflow-hidden transition-all duration-500 p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden rounded-xl mb-6 relative group h-64">
+                            <img src="cocopeat1.webp" alt="Cocopeat" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span class="text-sm font-medium tracking-widest text-emerald-300 uppercase">Premium Media</span>
+                            </div>
+                        </div>
+                        <h3 class="font-luxury text-2xl font-bold mb-3 tracking-wide text-emerald-100">COCOPEAT</h3>
+                        <p class="text-emerald-100/60 text-sm font-light leading-relaxed mb-6">
+                            Media tanam organik berkualitas tinggi hasil dari penghancuran sabut kelapa. Memiliki daya serap air yang luar biasa, sangat optimal untuk pertumbuhan tanaman, pembibitan, dan hidroponik.
+                        </p>
+                    </div>
+                    <a href="https://shopee.co.id/Cocopeat-Super-1-Karung-Kemasan-50kg-Media-Tanam-Organik-Minim-Serat-Hidroponik-Nursery-i.1822543853.48310212031?extraParams=%7B%22display_model_id%22%3A282602366065%2C%22model_selection_logic%22%3A3%7D" target="_blank" class="w-full text-center border border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-medium py-3 rounded-xl transition-all duration-300 text-sm tracking-wider uppercase">
+                        <i class="fa-solid fa-bag-shopping mr-2"></i> Beli di Shopee
+                    </a>
+                </div>
+
+                <!-- Card 2: Coco Bristle -->
+                <div data-aos="fade-up" data-aos-delay="300" class="product-card glassmorphism rounded-2xl overflow-hidden transition-all duration-500 p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden rounded-xl mb-6 relative group h-64">
+                            <img src="cocobristel1.webp" alt="Coco Bristle" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span class="text-sm font-medium tracking-widest text-emerald-300 uppercase">Industrial Grade</span>
+                            </div>
+                        </div>
+                        <h3 class="font-luxury text-2xl font-bold mb-3 tracking-wide text-emerald-100">COCO BRISTLE</h3>
+                        <p class="text-emerald-100/60 text-sm font-light leading-relaxed mb-6">
+                            Serat kelapa pilihan berukuran panjang dan tebal yang memiliki tekstur kuat sekaligus fleksibel. Sangat cocok sebagai bahan baku pembuatan sikat industri, sapu premium, kerajinan tangan, hingga aplikasi penyaringan.
+                        </p>
+                    </div>
+                    <a href="https://shopee.co.id/Serat-Sabut-Kelapa-Mulus-Kering-300gr-Coco-Fiber-Coco-Bristle-Premium-i.1822543853.58160189680?extraParams=%7B%22display_model_id%22%3A375896136776%2C%22model_selection_logic%22%3A3%7D" target="_blank" class="w-full text-center border border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-medium py-3 rounded-xl transition-all duration-300 text-sm tracking-wider uppercase">
+                        <i class="fa-solid fa-bag-shopping mr-2"></i> Beli di Shopee
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info & Contact Section -->
+    <section id="contact" class="py-24 bg-[#0a1715] relative">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                
+                <!-- Brand Info -->
+                <div data-aos="fade-up" class="space-y-6">
+                    <h3 class="font-luxury text-3xl font-semibold nature-gradient">Coco House</h3>
+                    <p class="text-emerald-100/60 font-light text-sm leading-relaxed">
+                        Kami berkomitmen penuh menyajikan produk turunan kelapa kualitas premium untuk pasar domestik maupun internasional.
+                    </p>
+                    <div class="flex space-x-4 text-emerald-800/60 text-lg">
+                        <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Office Address -->
+                <div data-aos="fade-up" data-aos-delay="100" class="space-y-4">
+                    <h4 class="text-sm tracking-widest uppercase font-semibold text-emerald-400">Alamat Kami</h4>
+                    <p class="text-emerald-100/80 font-light text-sm leading-relaxed">
+                        Desa Masaran, Kecamatan Bawang,<br>
+                        Kabupaten Banjarnegara,<br>
+                        Jawa Tengah, Indonesia
+                    </p>
+                    <a href="https://maps.app.goo.gl/WDQGPy8uQDz2Y2m47" target="_blank" class="inline-flex items-center text-xs tracking-wider uppercase text-emerald-400 font-medium hover:underline pt-2">
+                        <i class="fa-solid fa-location-dot mr-2"></i> Petunjuk Google Maps
+                    </a>
+                </div>
+
+                <!-- Live Contact / Call to Action -->
+                <div data-aos="fade-up" data-aos-delay="200" class="space-y-4">
+                    <h4 class="text-sm tracking-widest uppercase font-semibold text-emerald-400">Hubungi Kami</h4>
+                    <p class="text-emerald-100/80 font-light text-sm">Tertarik dengan kemitraan atau pemesanan skala besar?</p>
+                    <div class="pt-2">
+                        <a href="https://wa.me/6288225261925" target="_blank" class="inline-flex items-center glassmorphism px-6 py-3 rounded-xl hover:border-emerald-500 text-sm font-medium transition-all duration-300 w-full group">
+                            <span class="w-8 h-8 rounded-full bg-emerald-600/20 text-emerald-400 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </span>
+                            <div>
+                                <div class="text-[10px] uppercase tracking-wider text-emerald-500">WhatsApp Hot Line</div>
+                                <div class="text-emerald-200">088225261925</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="border-emerald-950 my-16">
+
+            <!-- Footer Copyright -->
+            <div class="text-center text-xs text-emerald-800 font-light tracking-wide">
+                &copy; 2026 Coco House. All Rights Reserved. Crafted with Organic Elegance.
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript Effects -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS (Animate on Scroll)
+        AOS.init({
+            duration: 1200,
+            once: true,
+            offset: 100
+        });
+
+        // Elegant Dynamic Light Background Effect (Moving Ambient Emerald Particles)
+        document.addEventListener('DOMContentLoaded', () => {
+            const ambient = document.getElementById('ambient-particles');
+            for(let i = 0; i < 15; i++) {
+                const particle = document.createElement('div');
+                particle.style.position = 'absolute';
+                particle.style.width = Math.random() * 300 + 100 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.borderRadius = '50%';
+                particle.style.background = 'radial-gradient(circle, rgba(52,211,153,0.04) 0%, rgba(0,0,0,0) 70%)';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.transform = 'translate(-50%, -50%)';
+                particle.style.pointerEvents = 'none';
+                
+                particle.animate([
+                    { transform: 'translate(-50%, -50%) translate(0, 0)' },
+                    { transform: `translate(-50%, -50%) translate(${Math.random() * 120 - 60}px, ${Math.random() * 120 - 60}px)` }
+                ], {
+                    duration: Math.random() * 6000 + 5000,
+                    iterations: Infinity,
+                    direction: 'alternate',
+                    easing: 'ease-in-out'
+                });
+
+                ambient.appendChild(particle);
+            }
+        });
+    </script>
 </body>
 </html>
